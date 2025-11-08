@@ -1,0 +1,14 @@
+{
+  "model_config": {
+    "model_name": "gpt-4o-mini",
+    "temperature": 0.9,
+    "max_tokens": 500
+  },
+  "retrieval_config": {
+    "top_k": 10,
+    "use_mmr": true,
+    "mmr_lambda": 0.9
+  },
+  "prompt_strategy": "example_driven",
+  "optimization_date": "2025-11-08T17:31:38.965810"
+}
