@@ -52,6 +52,7 @@ if st.button("🚀 Generate Post", type="primary"):
             from prompter import PromptBuilder
             from generate import PostGenerator
             from plagiarism_checker import PlagiarismChecker
+            from memory_manager import MemoryManager
             
             log(f"✅ Imports done in {time.time()-start:.2f}s")
             
@@ -105,6 +106,27 @@ if st.button("🚀 Generate Post", type="primary"):
             post = result['post']
             
             log(f"✅ Post generated in {time.time()-start:.2f}s")
+            
+            # Log to memory
+            log("⏱️ Logging to memory...")
+            memory_start = time.time()
+            
+            memory_manager = MemoryManager(memory_path="memory/memory.json", verbose=False)
+            
+            # Count hashtags and words
+            hashtag_count = post.count('#')
+            word_count = len(post.split())
+            
+            memory_manager.log_generated_post({
+                'post': post,
+                'topic': topic,
+                'method': 'RAG',
+                'word_count': word_count,
+                'hashtag_count': hashtag_count,
+                'persona': f"{name} - {title} at {company}"
+            })
+            
+            log(f"✅ Logged to memory in {time.time()-memory_start:.2f}s")
             
             # Show result
             st.success("🎉 Generation Complete!")
