@@ -1,0 +1,23 @@
+{
+  "persona": {
+    "name": "Sample User",
+    "title": "CEO",
+    "company": "Tech Company",
+    "industry": "Technology"
+  },
+  "preferences": {
+    "preferred_hashtags": ["#AI", "#Innovation", "#Leadership", "#Technology"],
+    "banned_phrases": ["click the link", "like and share", "follow for more"],
+    "recurring_themes": ["AI ethics", "sustainability", "team collaboration", "innovation"],
+    "tone": "professional, optimistic, insightful",
+    "structure": "Hook → Insight → Example → Reflection"
+  },
+  "style_guidelines": {
+    "max_hashtags": 4,
+    "use_emojis": false,
+    "word_count_range": [120, 220],
+    "first_person": true,
+    "sentence_structure": "varied with short and medium sentences"
+  },
+  "previous_posts": []
+}

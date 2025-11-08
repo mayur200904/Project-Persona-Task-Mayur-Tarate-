@@ -1,0 +1,30 @@
+# Core Dependencies
+openai==1.54.3
+langchain==0.3.7
+langchain-openai==0.2.5
+langchain-community==0.3.5
+
+# Vector Store & Embeddings
+faiss-cpu==1.8.0
+sentence-transformers==3.2.1
+
+# Data Processing
+numpy==1.26.4
+pandas==2.2.3
+
+# Web Interface
+streamlit==1.39.0
+streamlit-chat==0.1.1
+
+# Text Processing
+nltk==3.9.1
+textstat==0.7.4
+
+# Utilities
+python-dotenv==1.0.1
+pydantic==2.9.2
+tqdm==4.66.5
+
+# Visualization (optional)
+plotly==5.24.1
+matplotlib==3.9.2
