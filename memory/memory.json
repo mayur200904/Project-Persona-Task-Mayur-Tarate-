@@ -1,0 +1,57 @@
+{
+  "persona": {
+    "name": "Sundar Pichai ",
+    "title": "CEO",
+    "company": "Google ",
+    "industry": "Technology"
+  },
+  "preferences": {
+    "preferred_hashtags": [
+      "#AI",
+      "#Innovation",
+      "#Leadership",
+      "#Technology"
+    ],
+    "banned_phrases": [
+      "click the link",
+      "like and share",
+      "follow for more"
+    ],
+    "recurring_themes": [
+      "AI ethics",
+      "sustainability",
+      "team collaboration",
+      "innovation"
+    ],
+    "tone": "professional, optimistic, insightful",
+    "structure": "Hook → Insight → Example → Reflection"
+  },
+  "style_guidelines": {
+    "max_hashtags": 4,
+    "use_emojis": false,
+    "word_count_range": [
+      120,
+      220
+    ],
+    "first_person": true,
+    "sentence_structure": "varied with short and medium sentences"
+  },
+  "previous_posts": [
+    {
+      "timestamp": "2025-11-08T23:50:42.152810",
+      "post": "Test LinkedIn post about AI innovation...",
+      "topic": "AI Innovation",
+      "method": "RAG",
+      "word_count": 50,
+      "hashtag_count": 2
+    },
+    {
+      "timestamp": "2025-11-08T23:55:55.425891",
+      "post": "As students around the world prepare for a new academic year, I find myself filled with optimism about the transformative potential of technology in education. Today marks an important step in our commitment to empowering the next generation. We’re thrilled to announce that our most advanced AI tools will be available for free to college students in the US, Japan, Indonesia, South Korea, and Brazil through a 12-month Google AI Pro plan. \n\nThis initiative goes beyond mere access; it’s about unlocking creativity and innovation. I reflect on my own academic journey, where technology played a pivotal role in shaping my path. The right tools can inspire new ideas and foster collaboration. \n\nIn addition to providing these tools, we are investing $1 billion into AI education and job training programs. This ensures that every college student in America has the opportunity to enhance their skills and prepare for the future. The positive feedback from our initial launch in Indonesia has been truly encouraging, and we are excited to extend this opportunity to millions more.\n\nOur vision is straightforward: to make AI a supportive partner for everyone. By sharing these resources, we cultivate a community of learners ready to collaborate, innovate, and drive meaningful change. \n\n#AI #Education #Innovation #Empowerment",
+      "topic": "As students around the globe prepare to embark on a new academic year, I am filled with optimism about the transformative power of technology in education. Today, we are proud to announce that our most advanced AI tools will be available for free to college students in the US, Japan, Indonesia, South Korea, and Brazil through a 12-month Google AI Pro plan. This initiative is not just about providing access; it’s about unleashing potential.\n\nDuring my own academic journey, having regular access to technology profoundly shaped my path. I believe that by equipping today’s students with the best AI tools, we can open doors to creativity and innovation that we can only begin to imagine.\n\nIn addition to this access, we are investing $1 billion into AI education and job training programs, ensuring that every college student in America has the opportunity to grow their skills. The feedback we received from our initial launch in Indonesia has been heartening, and we are excited to extend this to millions more.\n\nOur goal is simple: to make AI a helpful companion for everyone, everywhere. By sharing these tools, we are fostering a community of learners who can collaborate, create, and drive change.\n\n#AI #Education #Innovation #Empowerment",
+      "method": "RAG",
+      "word_count": 207,
+      "hashtag_count": 4
+    }
+  ]
+}
