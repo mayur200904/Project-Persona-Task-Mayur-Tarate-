@@ -34,5 +34,89 @@
     "content": "Excited to share that we've launched our new AI-powered platform! This journey started with a simple question: how can we make technology more accessible? After months of hard work, countless iterations, and incredible team effort, we're here. This is just the beginning. I'm proud of what we've built and even more excited about what's next. Thank you to everyone who made this possible. #ProductLaunch #AI #Technology #Milestone",
     "date": "2024-05-25",
     "link": "https://linkedin.com/post/6"
+  },
+  {
+    "post_id": 7,
+    "content": "Privacy and security are not features — they're fundamental rights. As we build AI systems that process vast amounts of data, we have a responsibility to protect user information. Our new privacy framework puts users in control of their data, with transparent policies and end-to-end encryption by default. Trust is earned through action, not promises. We're committed to setting the standard for ethical AI development that respects privacy while delivering value. #Privacy #Security #EthicalAI #DataProtection",
+    "date": "2024-04-18",
+    "link": "https://linkedin.com/post/7"
+  },
+  {
+    "post_id": 8,
+    "content": "I remember my first coding project — a simple search algorithm that barely worked. Fast forward 25 years, and that curiosity has taken me on an incredible journey. To every young engineer out there: your first project doesn't need to change the world. It just needs to spark your passion. Start small, stay curious, and never stop learning. The path from beginner to expert is paved with countless small experiments and failures. Embrace them all. #Engineering #CareerAdvice #Technology #LearningJourney",
+    "date": "2024-04-02",
+    "link": "https://linkedin.com/post/8"
+  },
+  {
+    "post_id": 9,
+    "content": "Remote work isn't just about location flexibility. It's about rethinking how we collaborate, communicate, and build culture. Over the past years, we've learned that the best hybrid models combine intentional in-person connection with the deep focus that remote work enables. There's no one-size-fits-all solution. Each team needs to find what works for them, with trust and autonomy at the core. The future of work is flexible, human-centered, and outcome-driven. #FutureOfWork #RemoteWork #HybridWork #WorkCulture",
+    "date": "2024-03-15",
+    "link": "https://linkedin.com/post/9"
+  },
+  {
+    "post_id": 10,
+    "content": "Debugging taught me more about problem-solving than any textbook ever could. Every bug is a puzzle — sometimes frustrating, always enlightening. When you finally find that missing semicolon or logic error, you don't just fix code. You develop resilience, patience, and systematic thinking. These skills transcend programming. They're life skills. To the engineers pulling all-nighters debugging: you're not just fixing code, you're building character. #SoftwareEngineering #ProblemSolving #GrowthMindset",
+    "date": "2024-02-28",
+    "link": "https://linkedin.com/post/10"
+  },
+  {
+    "post_id": 11,
+    "content": "Quantum computing is no longer science fiction. Last week, our research team achieved a breakthrough in error correction that brings us closer to practical quantum applications. While we're still years away from mainstream adoption, the progress is remarkable. Imagine solving problems in minutes that would take classical computers millennia. From drug discovery to climate modeling, the potential is staggering. The quantum future is being built today, one qubit at a time. #QuantumComputing #Research #Innovation #EmergingTech",
+    "date": "2024-02-10",
+    "link": "https://linkedin.com/post/11"
+  },
+  {
+    "post_id": 12,
+    "content": "Mentorship changed my life. Early in my career, a senior engineer took the time to explain not just what code does, but why we write it a certain way. That investment in my growth shaped everything that followed. Today, I try to pay it forward. If you're in a position to mentor, do it. If you need mentorship, ask for it. Knowledge grows when shared, and the best teams are built on a foundation of continuous learning and generous teaching. #Mentorship #CareerGrowth #Leadership #Learning",
+    "date": "2024-01-22",
+    "link": "https://linkedin.com/post/12"
+  },
+  {
+    "post_id": 13,
+    "content": "AI hallucinations are a critical challenge we must address head-on. Large language models can confidently generate false information, which poses real risks in high-stakes applications. Our latest research focuses on improving factual accuracy through better training data, retrieval-augmented generation, and uncertainty quantification. We need the entire AI community working on this. Reliability isn't optional — it's essential for building AI systems people can trust. Here's our approach and early results: [technical thread in comments]. #AI #Research #MachineLearning #AIEthics",
+    "date": "2024-01-05",
+    "link": "https://linkedin.com/post/13"
+  },
+  {
+    "post_id": 14,
+    "content": "Celebrating our engineering team's achievement: 99.99% uptime for the past year! Behind this number are countless hours of careful architecture design, proactive monitoring, incident response drills, and a culture that treats reliability as everyone's responsibility. Uptime isn't luck — it's discipline. It's redundancy. It's chaos engineering and learning from near-misses. Huge thanks to our SRE team for setting the bar high and our engineers for building systems that rarely need them. This is what engineering excellence looks like. #SRE #Reliability #Engineering #DevOps",
+    "date": "2023-12-18",
+    "link": "https://linkedin.com/post/14"
+  },
+  {
+    "post_id": 15,
+    "content": "The intersection of AI and healthcare is where I see the most profound potential for impact. Early disease detection, personalized treatment plans, drug discovery acceleration — we're just scratching the surface. But with great power comes great responsibility. Healthcare AI must be rigorously validated, explainable to doctors, and accessible to underserved communities. We're partnering with medical institutions to ensure our tools enhance, not replace, human expertise. Technology should democratize healthcare, not create new divides. #HealthTech #AI #Healthcare #Innovation",
+    "date": "2023-12-01",
+    "link": "https://linkedin.com/post/15"
+  },
+  {
+    "post_id": 16,
+    "content": "Failure is feedback in disguise. Our cloud platform launch in 2018 was rocky — crashes, performance issues, frustrated customers. We could have given up. Instead, we listened, rebuilt core components, and came back stronger. That 'failed' launch taught us more than any success could have. Today, that same platform serves millions reliably. The teams that win aren't the ones that never fail. They're the ones that fail forward, learn fast, and iterate relentlessly. #Entrepreneurship #Resilience #ProductDevelopment #Lessons",
+    "date": "2023-11-15",
+    "link": "https://linkedin.com/post/16"
+  },
+  {
+    "post_id": 17,
+    "content": "Open source changed my career and shaped the entire tech industry. The collaborative spirit of sharing code, fixing bugs together, and building on each other's work is powerful. We've contributed over 1,000 projects to open source and benefited from millions of developer-hours of community work. It's not just about free software — it's about collective progress. If you've never contributed to open source, start today. Your first pull request might feel small, but you're joining a movement that accelerates innovation for everyone. #OpenSource #SoftwareDevelopment #Community #Collaboration",
+    "date": "2023-10-28",
+    "link": "https://linkedin.com/post/17"
+  },
+  {
+    "post_id": 18,
+    "content": "Technical debt is like financial debt — sometimes necessary, but always expensive if left unmanaged. We've dedicated 20% of our engineering time to paying down tech debt: refactoring legacy systems, improving test coverage, updating dependencies. Short-term, it feels like slowing down. Long-term, it's the only way to move fast sustainably. The teams building for the long haul make time for the 'boring' work: documentation, tests, clean architecture. Speed without stability is just chaos with better marketing. #Engineering #TechnicalDebt #SoftwareArchitecture #BestPractices",
+    "date": "2023-10-10",
+    "link": "https://linkedin.com/post/18"
+  },
+  {
+    "post_id": 19,
+    "content": "Edge computing is bringing intelligence closer to where data is generated. Instead of sending everything to the cloud, we're processing data on devices — faster responses, better privacy, lower bandwidth costs. Our latest edge AI chips process computer vision tasks locally on smartphones and IoT devices. This isn't just about performance. It's about enabling AI applications in environments with limited connectivity and enabling privacy-preserving use cases. The future is distributed, and the edge is where innovation happens. #EdgeComputing #AI #IoT #Technology",
+    "date": "2023-09-22",
+    "link": "https://linkedin.com/post/19"
+  },
+  {
+    "post_id": 20,
+    "content": "Twenty years ago, I interviewed at a tech company and was rejected. That rejection led me to explore other opportunities, meet incredible people, and ultimately build skills I wouldn't have developed otherwise. Today, I'm grateful for that 'no.' Not every rejection is a reflection of your worth. Sometimes it's redirection. Sometimes the timing isn't right. Sometimes you're being steered toward something better. Keep interviewing, keep learning, keep building. Your path isn't determined by one decision from one person on one day. Trust the journey. #CareerAdvice #Motivation #ProfessionalGrowth #Perspective",
+    "date": "2023-09-05",
+    "link": "https://linkedin.com/post/20"
   }
 ]
