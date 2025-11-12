@@ -13,8 +13,8 @@ sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
 st.set_page_config(page_title="LinkedIn RAG Agent - Personalized", page_icon="🚀", layout="wide")
 
-st.title("🚀 LinkedIn RAG Agent - Your Personal Style")
-st.caption("✨ Upload YOUR LinkedIn posts → Generate in YOUR unique voice")
+st.title(" LinkedIn RAG Agent - Your Personal Style")
+st.caption(" Upload YOUR LinkedIn posts → Generate in YOUR unique voice")
 
 # Sidebar
 with st.sidebar:
@@ -25,9 +25,9 @@ with st.sidebar:
     industry = st.text_input("Industry", value="Technology")
 
 # Main area - CRITICAL: User Upload Section
-st.header("� Step 1: Upload YOUR LinkedIn Posts")
+st.header(" Step 1: Upload YOUR LinkedIn Posts")
 st.markdown("""
-**🎯 This is the core feature:** Paste 4-5 of YOUR past LinkedIn posts below.  
+** This is the core feature:** Paste 4-5 of YOUR past LinkedIn posts below.  
 The model will learn YOUR unique writing style, tone, and voice to generate new posts that sound like YOU.
 """)
 
@@ -45,10 +45,10 @@ Post 3: Big announcement! Our team just reached 1M users...
 (Paste your actual LinkedIn posts here)"""
 )
 
-use_sample_data = st.checkbox("🔧 Use demo data instead (for testing only)", value=False)
+use_sample_data = st.checkbox(" Use demo data instead (for testing only)", value=False)
 
 st.divider()
-st.header("📝 Step 2: What Do You Want to Post About?")
+st.header(" Step 2: What Do You Want to Post About?")
 
 topic = st.text_area(
     "Post Topic",
@@ -59,9 +59,9 @@ topic = st.text_area(
 if st.button("🚀 Generate Post in YOUR Style", type="primary"):
     # Validation
     if not topic:
-        st.error("❌ Please enter a topic!")
+        st.error(" Please enter a topic!")
     elif not user_posts_input.strip() and not use_sample_data:
-        st.error("❌ Please paste YOUR 4-5 LinkedIn posts, or check 'Use demo data' for testing!")
+        st.error(" Please paste YOUR 4-5 LinkedIn posts, or check 'Use demo data' for testing!")
     else:
         log_area = st.empty()
         result_area = st.empty()
@@ -87,16 +87,16 @@ if st.button("🚀 Generate Post in YOUR Style", type="primary"):
             import faiss
             from openai import OpenAI
             
-            log(f"✅ Imports done in {time.time()-start:.2f}s")
+            log(f" Imports done in {time.time()-start:.2f}s")
             
             # Step 2: Parse user posts OR use sample data
-            log("⏱️ Step 2/6: Processing YOUR posts...")
+            log("⏱ Step 2/6: Processing YOUR posts...")
             start = time.time()
             
             if use_sample_data:
                 # Load sample data for demo
                 retriever = PostRetriever(verbose=False)
-                log(f"✅ Using demo data: {retriever.index.ntotal} sample posts")
+                log(f" Using demo data: {retriever.index.ntotal} sample posts")
                 user_provided = False
             else:
                 # Parse user's posts
@@ -104,10 +104,10 @@ if st.button("🚀 Generate Post in YOUR Style", type="primary"):
                 raw_posts = user_posts_input.strip().split('\n\n')  # Split by blank lines
                 
                 print("\n" + "="*70)
-                print("📥 STEP 2: PARSING USER INPUT")
+                print(" STEP 2: PARSING USER INPUT")
                 print("="*70)
-                print(f"📝 Raw input length: {len(user_posts_input)} characters")
-                print(f"📄 Split into {len(raw_posts)} potential posts (by blank lines)")
+                print(f" Raw input length: {len(user_posts_input)} characters")
+                print(f" Split into {len(raw_posts)} potential posts (by blank lines)")
                 
                 for i, post_text in enumerate(raw_posts):
                     post_text = post_text.strip()
@@ -118,26 +118,26 @@ if st.button("🚀 Generate Post in YOUR Style", type="primary"):
                             "date": "2024",
                             "author": name
                         })
-                        print(f"  ✅ Post #{i+1}: {len(post_text)} chars, {len(post_text.split())} words")
+                        print(f"   Post #{i+1}: {len(post_text)} chars, {len(post_text.split())} words")
                         print(f"     Preview: {post_text[:80]}...")
                     else:
-                        print(f"  ⚠️ Skipped chunk #{i+1}: Too short ({len(post_text)} chars)")
+                        print(f"   Skipped chunk #{i+1}: Too short ({len(post_text)} chars)")
                 
-                print(f"\n✅ Successfully parsed {len(user_posts)} posts")
-                print(f"📊 Total content: {sum(len(p['text']) for p in user_posts)} characters")
+                print(f"\n Successfully parsed {len(user_posts)} posts")
+                print(f" Total content: {sum(len(p['text']) for p in user_posts)} characters")
                 print("="*70 + "\n")
                 
                 if len(user_posts) < 3:
-                    st.warning(f"⚠️ Only found {len(user_posts)} posts. For best results, provide 4-5 posts.")
+                    st.warning(f" Only found {len(user_posts)} posts. For best results, provide 4-5 posts.")
                 
-                log(f"✅ Parsed {len(user_posts)} of YOUR posts in {time.time()-start:.2f}s")
+                log(f" Parsed {len(user_posts)} of YOUR posts in {time.time()-start:.2f}s")
                 
                 # Step 3: Build dynamic index from user's posts
                 log("⏱️ Step 3/6: Building personalized index from YOUR style...")
                 start = time.time()
                 
                 print("\n" + "="*70)
-                print("🔄 STEP 3: GENERATING EMBEDDINGS & BUILDING INDEX")
+                print(" STEP 3: GENERATING EMBEDDINGS & BUILDING INDEX")
                 print("="*70)
                 
                 client = OpenAI()
@@ -145,24 +145,24 @@ if st.button("🚀 Generate Post in YOUR Style", type="primary"):
                 # Generate embeddings for user's posts
                 texts_to_embed = [post['text'] for post in user_posts]
                 
-                print(f"📤 Sending {len(texts_to_embed)} texts to OpenAI for embedding...")
-                print(f"🤖 Model: text-embedding-3-small (1536 dimensions)")
+                print(f" Sending {len(texts_to_embed)} texts to OpenAI for embedding...")
+                print(f" Model: text-embedding-3-small (1536 dimensions)")
                 
                 for i, text in enumerate(texts_to_embed):
                     word_count = len(text.split())
                     char_count = len(text)
-                    print(f"  📝 Text #{i+1}: {word_count} words, {char_count} chars")
+                    print(f"   Text #{i+1}: {word_count} words, {char_count} chars")
                 
                 response = client.embeddings.create(
                     input=texts_to_embed,
                     model="text-embedding-3-small"
                 )
                 
-                print(f"\n✅ Received {len(response.data)} embeddings from OpenAI")
+                print(f"\n Received {len(response.data)} embeddings from OpenAI")
                 
                 embeddings = np.array([item.embedding for item in response.data], dtype='float32')
                 
-                print(f"📊 Embeddings shape: {embeddings.shape}")
+                print(f" Embeddings shape: {embeddings.shape}")
                 print(f"   - {embeddings.shape[0]} vectors")
                 print(f"   - {embeddings.shape[1]} dimensions each")
                 print(f"   - Data type: {embeddings.dtype}")
@@ -178,7 +178,7 @@ if st.button("🚀 Generate Post in YOUR Style", type="primary"):
                 
                 user_index.add(embeddings)
                 
-                print(f"✅ FAISS index built successfully")
+                print(f" FAISS index built successfully")
                 print(f"   - Total vectors indexed: {user_index.ntotal}")
                 print(f"   - Index trained: {user_index.is_trained}")
                 
@@ -187,10 +187,10 @@ if st.button("🚀 Generate Post in YOUR Style", type="primary"):
                 retriever.index = user_index  # Replace with user's index
                 retriever.chunks = user_posts  # Replace with user's posts
                 
-                print(f"\n✅ Personalized retriever ready with YOUR {len(user_posts)} posts")
+                print(f"\n Personalized retriever ready with YOUR {len(user_posts)} posts")
                 print("="*70 + "\n")
                 
-                log(f"✅ Personalized index built in {time.time()-start:.2f}s ({len(user_posts)} YOUR posts indexed)")
+                log(f" Personalized index built in {time.time()-start:.2f}s ({len(user_posts)} YOUR posts indexed)")
                 user_provided = True
             
             # Step 4: Retrieve from user's style
@@ -208,9 +208,9 @@ if st.button("🚀 Generate Post in YOUR Style", type="primary"):
                 "industry": industry
             }
             
-            print(f"🎯 Query topic: '{topic}'")
-            print(f"👤 Persona: {name} - {title} at {company}")
-            print(f"📊 Retrieval settings:")
+            print(f" Query topic: '{topic}'")
+            print(f" Persona: {name} - {title} at {company}")
+            print(f" Retrieval settings:")
             print(f"   - Top-K: {min(5, len(retriever.chunks))}")
             print(f"   - MMR (diversity): Enabled")
             print(f"   - Lambda: 0.9")
@@ -222,23 +222,23 @@ if st.button("🚀 Generate Post in YOUR Style", type="primary"):
                 use_mmr=True
             )
             
-            print(f"\n✅ Retrieved {len(chunks)} relevant chunks")
+            print(f"\n Retrieved {len(chunks)} relevant chunks")
             for i, chunk in enumerate(chunks):
                 chunk_text = chunk.get('text', chunk.get('content', ''))
-                print(f"\n  📄 Chunk #{i+1} (ID: {chunk.get('id', 'N/A')})")
+                print(f"\n   Chunk #{i+1} (ID: {chunk.get('id', 'N/A')})")
                 print(f"     Length: {len(chunk_text)} chars, {len(chunk_text.split())} words")
                 print(f"     Preview: {chunk_text[:100]}...")
             
             print("="*70 + "\n")
             
-            log(f"✅ Retrieved {len(chunks)} examples of YOUR style in {time.time()-start:.2f}s")
+            log(f" Retrieved {len(chunks)} examples of YOUR style in {time.time()-start:.2f}s")
             
             # Step 5: Build prompt
-            log("⏱️ Step 5/6: Building prompt with YOUR style...")
+            log("⏱ Step 5/6: Building prompt with YOUR style...")
             start = time.time()
             
             print("\n" + "="*70)
-            print("✍️  STEP 5: BUILDING PROMPT")
+            print("  STEP 5: BUILDING PROMPT")
             print("="*70)
             
             prompt_builder = PromptBuilder()
@@ -248,7 +248,7 @@ if st.button("🚀 Generate Post in YOUR Style", type="primary"):
                 chunks
             )
             
-            print(f"📝 Prompt components:")
+            print(f" Prompt components:")
             print(f"   - System message: {len(prompt_dict.get('system', ''))} chars")
             print(f"   - User message: {len(prompt_dict.get('user', ''))} chars")
             print(f"   - Context chunks: {len(chunks)}")
@@ -260,7 +260,7 @@ if st.button("🚀 Generate Post in YOUR Style", type="primary"):
             print(f"   (Total chars: {total_prompt_length})")
             print("="*70 + "\n")
             
-            log(f"✅ Prompt built in {time.time()-start:.2f}s")
+            log(f" Prompt built in {time.time()-start:.2f}s")
             
             # Step 6: Generate
             log("⏱️ Step 6/6: Generating post in YOUR voice...")
@@ -505,7 +505,7 @@ if st.button("🚀 Generate Post in YOUR Style", type="primary"):
                 </div>
                 """, unsafe_allow_html=True)
                 
-                tab1, tab2, tab3 = st.tabs(["📌 Hashtags", "💬 Phrases", "🔤 Common Words"])
+                tab1, tab2, tab3 = st.tabs([" Hashtags", "💬 Phrases", "🔤 Common Words"])
                 
                 with tab1:
                     if used_hashtags:
@@ -553,12 +553,12 @@ if st.button("🚀 Generate Post in YOUR Style", type="primary"):
 
 st.divider()
 st.markdown("""
-### 🎯 How This Works:
+###  How This Works:
 1. **Upload YOUR Posts:** Paste 4-5 of your actual LinkedIn posts above
 2. **Dynamic Indexing:** The system creates embeddings from YOUR posts in real-time
 3. **Style Learning:** RAG retrieves examples from YOUR writing style
 4. **Personalized Generation:** GPT-4 generates new posts that sound like YOU
 
-**This is the core innovation:** Unlike generic AI writers, this learns YOUR unique voice! 🚀
+**This is the core innovation:** Unlike generic AI writers, this learns YOUR unique voice! 
 """)
-st.caption("✨ Personalized LinkedIn RAG Agent - Your Style, Your Voice")
+st.caption(" Personalized LinkedIn RAG Agent - Your Style, Your Voice")
